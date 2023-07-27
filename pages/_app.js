@@ -15,9 +15,9 @@ function MyApp({ Component, pageProps }) {
       </Head>
 
       <Layout>
-        <ThemeProvider>
-          <Component {...pageProps} />
-        </ThemeProvider>
+          <ThemeProvider>
+            <Component {...pageProps} />
+          </ThemeProvider>
       </Layout>
     </>
   );

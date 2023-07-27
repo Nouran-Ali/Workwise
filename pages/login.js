@@ -8,27 +8,33 @@ import axios from 'axios';
 const login = () => {
 
     const [passwordVisible, setPasswordVisible] = React.useState(false);
+
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [error, setError] = useState('')
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
 
-        axios.post("http://localhost:3000/api/user", {
-            email: email,
-            password: password
-        })
-            .then((response) => {
-                console.log(response);
-            })
-            .catch((error) => {
-                setError(error);
-            });
-    }
+    //     axios.post("http://localhost:3000/api/user", {
+    //         email: email,
+    //         password: password
+    //     })
+    //         .then((response) => {
+    //             console.log(response);
+    //         })
+    //         .catch((error) => {
+    //             setError(error);
+    //         });
+    // }
+
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+
+    };
 
     return (
-        <div className={`${styles.login} bg-[#e65349] flex justify-center items-center`}>
+        <div className={`${styles.login} bg-[#e44d3a] flex justify-center items-center`}>
             <div className={`container w-2/3 ${styles.box}`}>
                 <div className=" grid grid-cols-2 flex justify-center py-6">
                     <div className="px-5 py-5">
@@ -44,11 +50,11 @@ const login = () => {
 
                     <div className="px-7 py-5 border-l">
                         <div className="flex justify-end">
-                            <button className="bg-[#e65349] text-white py-2 px-3 rounded-l-lg">Sign in</button>
-                            <button className="bg-zinc-300 text-black py-2 px-3 rounded-r-lg">Sign up</button>
+                            <a href="/login"><button className="bg-[#e44d3a] text-white py-2 px-3 rounded-l-lg">Sign in</button></a>
+                            <a href="/signUp"><button className="bg-zinc-300 text-black py-2 px-3 rounded-r-lg">Sign up</button></a>
                         </div>
                         <h3 className="text-xl">Sign in</h3>
-                        <hr className="mt-2 mb-4 w-10 border border-[#e65349] " />
+                        <hr className="mt-2 mb-4 w-10 border border-[#e44d3a] " />
                         <form onSubmit={handleSubmit}>
                             <Input
                                 placeholder="Email"
@@ -56,7 +62,6 @@ const login = () => {
                                 className="mb-4"
                                 onChange={(e) => setEmail(e.target.value)}
                                 name="email"
-                                value={email}
                                 required
                             />
 
@@ -70,7 +75,6 @@ const login = () => {
                                 className="mb-3"
                                 onChange={(e) => setPassword(e.target.value)}
                                 name="password"
-                                value={password}
                                 required
                             />
                             <div className="flex justify-between">
@@ -78,7 +82,7 @@ const login = () => {
                                 <a href="#" className="text-base text-slate-600">Forgot Password?</a>
                             </div>
                             {error ? <p className="flex justify-center">{error}</p> : " "}
-                            <button className="mt-4 mb-5 bg-[#e65349] text-white py-2 px-6 rounded" type="submit">Sign in</button>
+                            <button className="mt-4 mb-5 bg-[#e44d3a] text-white py-2 px-6 rounded" type="submit">Sign in</button>
                         </form>
                         <h3 className="text-center text-base">LOGIN VIA SOCIAL ACCOUNT</h3>
 
@@ -123,8 +127,7 @@ const login = () => {
 
                 <a href="#" class="footer-links">Copyright Policy</a>
             </div> */}
-        </div>
-    )
+        </div>)
 }
 
 export default login

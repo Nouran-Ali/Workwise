@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import axios from 'axios';
+import React, { useState } from 'react';
+import Navbar from '@/components/Navbar';
 
 export default function Home() {
 
@@ -17,8 +17,13 @@ export default function Home() {
   //   });
 
   return (
-    <div className="text-3xl font-bold underline">
+    <>
+      <div className='bg-[#f2f2f2]'>
+        <Navbar />
+        hh
+      </div>
 
-    </div>
+    </>
+
   )
 }

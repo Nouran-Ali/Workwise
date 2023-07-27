@@ -10,8 +10,13 @@
 
 /* Login page */
 :where(.css-dev-only-do-not-override-14wwjjs).ant-radio-wrapper .ant-radio-checked .ant-radio-inner {
-  border-color: #e65349;
-  background-color: #e65349;
+  border-color: #e44d3a;
+  background-color: #e44d3a;
+}
+
+/* Home page */
+.ant-menu-item-icon{
+  display: block !important;
 }
 
 @media (prefers-color-scheme: dark) {

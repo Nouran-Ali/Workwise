@@ -1,13 +1,16 @@
+import React from 'react'
+import { createContext, useContext, Context } from 'react'
+
 
 const Layout = ({ children }) => {
 
     return (
         <>
-            <div className="">
-                {children}
-            </div>
+            {children}
         </>
     );
 };
 
 export default Layout;
+
+
