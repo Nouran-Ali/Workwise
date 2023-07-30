@@ -1,0 +1,15 @@
+.Dropdown {
+    width: 170px;
+    position: absolute;
+    background-color: #e44d3a;
+    color: white;
+    border: 1px solid #ca392f;
+}
+.Dropdown a{
+    display: block;
+    margin-top: 10px;
+}
+
+.menu{
+    margin-left: 180px;
+}

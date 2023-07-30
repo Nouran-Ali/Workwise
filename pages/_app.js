@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Script from 'next/script';
 import Layout from '../components/Layout';
 import { ThemeProvider } from 'next-themes';
+import Link from 'next/link';
 
 function MyApp({ Component, pageProps }) {
   return (
